@@ -35,7 +35,7 @@ jobs:
         run: mvn -B test
 
   #Sonar's job
-  sonar: tests
+  sonar: test
   name: SonarCloud analysis
   #Run on Ubuntu using the latest version
   runs-on: ubuntu-latest
