@@ -64,17 +64,4 @@ public class DataController {
         }
         return aviations;
     }
-
-    @GetMapping("/persona")
-    public Persona getFakePersona() {
-        Faker faker = new Faker();
-        return new Persona(
-                faker.number().numberBetween(1, 9999),
-                faker.name().firstName(),
-                faker.name().lastName(),
-                faker.internet().emailAddress(),
-                faker.number().numberBetween(18, 90)
-        );
-    }
-
 }
