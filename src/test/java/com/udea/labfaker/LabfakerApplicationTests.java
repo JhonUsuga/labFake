@@ -1,6 +1,7 @@
 package com.udea.labfaker;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -62,6 +63,39 @@ class LabfakerApplicationTests {
 	void aviationsLength(){
 		Integer aviationsLength = dataController.getRandomAviation().size();
 		assertEquals(20, aviationsLength);
+	}
+
+	@Test
+	void personaClassCoverageWithRandomData() {
+		Faker faker = new Faker();
+
+		int id = faker.number().numberBetween(1, 9999);
+		String nombre = faker.name().firstName();
+		String apellido = faker.name().lastName();
+		String correo = faker.internet().emailAddress();
+		int edad = faker.number().numberBetween(18, 90);
+
+		// Prueba del constructor completo
+		Persona p = new Persona(id, nombre, apellido, correo, edad);
+		assertEquals(id, p.getId());
+		assertEquals(nombre, p.getNombre());
+		assertEquals(apellido, p.getApellido());
+		assertEquals(correo, p.getCorreo());
+		assertEquals(edad, p.getEdad());
+
+		// Prueba del constructor vacío y setters
+		Persona p2 = new Persona();
+		p2.setId(id);
+		p2.setNombre(nombre);
+		p2.setApellido(apellido);
+		p2.setCorreo(correo);
+		p2.setEdad(edad);
+
+		assertEquals(id, p2.getId());
+		assertEquals(nombre, p2.getNombre());
+		assertEquals(apellido, p2.getApellido());
+		assertEquals(correo, p2.getCorreo());
+		assertEquals(edad, p2.getEdad());
 	}
 
 }
