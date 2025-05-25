@@ -108,26 +108,7 @@ jobs:
           name: artifact
           #From this path
           path: target/labfaker.jar
-          
-
-  #deploy
-  deploy:
-    name: Deploy to Railway
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Install Railway CLI
-        run: curl -fsSL https://railway.app/install.sh | sh
-
-      - name: Deploy using Railway CLI
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: |
-          railway up --detach
-      
-      
+            
 
       - name: Build & push Docker image
         uses: mr-smithers-excellent/docker-build-push@v6
