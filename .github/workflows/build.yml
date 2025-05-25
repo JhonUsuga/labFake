@@ -125,7 +125,7 @@ jobs:
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
         run: |
-          railway up --service mellow-cooperation --detach
+          railway up --detach
       
       
 
