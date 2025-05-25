@@ -124,9 +124,8 @@ jobs:
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
         run: |
-          railway login --token $RAILWAY_TOKEN
-          railway up --service mellow-cooperation --detach
-
+          railway up --detach
+      
 
       - name: Build & push Docker image
         uses: mr-smithers-excellent/docker-build-push@v6
