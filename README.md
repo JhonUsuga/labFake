@@ -8,7 +8,7 @@
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=JhonUsuga_labFake&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=JhonUsuga_labFake)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=JhonUsuga_labFake&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=JhonUsuga_labFake)
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=JhonUsuga_labFake&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=JhonUsuga_labFake)
-[![Known Vulnerabilities](https://snyk.io/test/github/JhonUsuga/labFake/badge.svg)](https://snyk.io/test/github/JhonUsuga/labFake)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=JhonUsuga_labFake&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=JhonUsuga_labFake)
 
 Implementation of a Simple App with the next operations:
 
